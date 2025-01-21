@@ -108,16 +108,14 @@ const questionElement = document.getElementById("question");
 const options = document.querySelectorAll(".option-btn");
 const resultContainer = document.getElementById("resultContainer");
 const resultText = document.getElementById("result");
-const scoreElement = document.getElementById("score");
 
-function loadQuestion() {
-    const q = questions[currentQuestion];
+function loadRandomQuestion() {
+    // Make sure we don't repeat the same question
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    const q = questions[randomIndex];
     questionElement.textContent = q.question;
     options.forEach((option, index) => {
         option.textContent = q.options[index];
-        option.onclick = function() {
-            checkAnswer(index);
-        };
     });
     resultContainer.style.display = "none";
 }
@@ -129,20 +127,15 @@ function checkAnswer(optionIndex) {
     } else {
         resultText.textContent = `Incorrect! The correct answer is: ${questions[currentQuestion].options[questions[currentQuestion].answer]}`;
     }
-
-    scoreElement.textContent = `Score: ${score}`;
     resultContainer.style.display = "block";
 }
 
 function loadNextQuestion() {
-    currentQuestion++;
-    if (currentQuestion < questions.length) {
-        loadQuestion();
-    } else {
-        resultText.textContent = `Quiz Over! Final Score: ${score}`;
-        resultContainer.style.display = "block";
-        scoreElement.style.display = "none"; // Hide score while quiz is finished
+    loadRandomQuestion(); // Randomize the next question
+    currentQuestion++; // Increase the current question index
+    if (currentQuestion >= questions.length) {
+        currentQuestion = 0; // Reset to 0 if we've gone through all questions
     }
 }
 
-loadQuestion();
+loadRandomQuestion();
