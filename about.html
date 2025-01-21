@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Me</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet" /> <!-- For icons -->
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            font-size: 1.1em;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Instagram - Styled with Instagram's color */
+        nav a.instagram {
+            background: linear-gradient(to right, #f58529, #dd2a7b, #8134af, #515bd4);
+        }
+
+        nav a.instagram:hover {
+            background: linear-gradient(to right, #f58529, #dd2a7b, #8134af, #515bd4);
+        }
+
+        /* GitHub - Styled with GitHub's color */
+        nav a.github {
+            background-color: #333;
+            color: white;
+        }
+
+        nav a.github:hover {
+            background-color: #24292f;
+        }
+
+        /* X button - Styled with a red color */
+        nav a.x {
+            background-color: #e1306c;
+        }
+
+        nav a.x:hover {
+            background-color: #f1608b;
+        }
+
+        /* Main content section */
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            color: #4CAF50;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            section h2 {
+                font-size: 1.6em;
+            }
+
+            section p {
+                font-size: 1em;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="https://www.instagram.com/badr_jao_uad?igsh=eXdkcXBodW9id2h6" target="_blank" class="instagram">
+            <i class="fa-brands fa-instagram" style="margin-right: 8px;"></i>Instagram
+        </a>
+        <a href="https://github.com/badr-eightyfour" target="_blank" class="github">
+            <i class="fa-brands fa-github" style="margin-right: 8px;"></i>GitHub
+        </a>
+        <a href="#" onclick="window.close();" class="x">
+            <i class="fa-solid fa-xmark" style="margin-right: 8px;"></i>X
+        </a>
+    </nav>
+
+    <header>
+        <h1>About Me</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>BADR EIGHTYFOUR</h2>
+            <p>Hello! My name is <span class="highlight">Badr Eightyfour</span>, and I am passionate about web development. I love creating websites and applications that are both functional and user-friendly. My goal is to continue learning and improving my skills as a developer.</p>
+        </section>
+        
+        <section>
+            <h2>Join the Quiz Fun!</h2>
+            <p>Ready to test your knowledge? Start quizzing now and see how much you really know. Whether you're looking to challenge yourself, have some fun with friends, or just pass the time, Badr Quiz is the perfect place for quiz lovers of all kinds!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Badr Eightyfour. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

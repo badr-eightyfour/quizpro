@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="js.css">
+    <link rel="icon" href="./icons/js.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- JavaScript Logo and Title at the Top -->
+    <header class="quiz-header">
+        <i class="fa-brands fa-js-square"></i>
+        <h1>JAVASCRIPT QUIZ</h1>
+    </header>
+
+    <!-- Main Quiz Container -->
+    <div class="container">
+        <div id="quizContainer">
+            <p id="question"></p>
+            <div id="options" role="group" aria-labelledby="question">
+                <button class="option-btn" onclick="checkAnswer(0)" aria-label="Option 1"></button>
+                <button class="option-btn" onclick="checkAnswer(1)" aria-label="Option 2"></button>
+                <button class="option-btn" onclick="checkAnswer(2)" aria-label="Option 3"></button>
+                <button class="option-btn" onclick="checkAnswer(3)" aria-label="Option 4"></button>
+            </div>
+        </div>
+
+        <!-- Result Container -->
+        <div id="resultContainer" style="display:none;">
+            <p id="result"></p>
+            <button id="nextBtn" onclick="loadNextQuestion()">Next Question</button>
+        </div>
+    </div>
+
+    <!-- Footer with Back Home and Attribution -->
+    <footer>
+        <a href="index.html">
+            <button id="home" aria-label="Back to Home">Back Home</button>
+        </a>
+        <p class="footer-text">Created by Badr-Eightyfour</p>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>
