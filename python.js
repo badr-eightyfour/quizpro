@@ -115,6 +115,9 @@ function loadQuestion() {
     questionElement.textContent = q.question;
     options.forEach((option, index) => {
         option.textContent = q.options[index];
+        option.onclick = function() {
+            checkAnswer(index);
+        };
     });
     resultContainer.style.display = "none";
 }
