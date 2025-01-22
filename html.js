@@ -100,7 +100,6 @@ const questions = [
         answer: 1
     }
 ];
-
 let currentQuestion = 0;
 let score = 0;
 
@@ -109,18 +108,25 @@ const options = document.querySelectorAll(".option-btn");
 const resultContainer = document.getElementById("resultContainer");
 const resultText = document.getElementById("result");
 
-function checkAnswer(optionIndex) {
-    if (optionIndex === questions[currentQuestion].answer) {
-        score++;
-        resultText.textContent = "Correct!";
-    } else {
-        resultText.textContent = `Incorrect! The correct answer is: ${questions[currentQuestion].options[questions[currentQuestion].answer]}`;
-    }
-    resultContainer.style.display = "block";
+function loadRandomQuestion() {
+    // Make sure we don't repeat the same question
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    const q = questions[randomIndex];
+    questionElement.textContent = q.question;
+    options.forEach((option, index) => {
+        option.textContent = q.options[index];
+    });
+    resultContainer.style.display = "none";
 }
 
+
+
 function loadNextQuestion() {
-    loadRandomQuestion();
+    loadRandomQuestion(); // Randomize the next question
+    currentQuestion++; // Increase the current question index
+    if (currentQuestion >= questions.length) {
+        currentQuestion = 0; // Reset to 0 if we've gone through all questions
+    }
 }
 
 loadRandomQuestion();
