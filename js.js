@@ -113,20 +113,6 @@ const questionElement = document.getElementById("question");
 const options = document.querySelectorAll(".option-btn");
 const resultContainer = document.getElementById("resultContainer");
 const resultText = document.getElementById("result");
-
-function loadRandomQuestion() {
-    // Make sure we don't repeat the same question
-    const randomIndex = Math.floor(Math.random() * questions.length);
-    const q = questions[randomIndex];
-    questionElement.textContent = q.question;
-    options.forEach((option, index) => {
-        option.textContent = q.options[index];
-    });
-    resultContainer.style.display = "none";
-}
-
-
-
 function loadNextQuestion() {
     loadRandomQuestion(); // Randomize the next question
     currentQuestion++; // Increase the current question index
