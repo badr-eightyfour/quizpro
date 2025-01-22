@@ -109,16 +109,6 @@ const options = document.querySelectorAll(".option-btn");
 const resultContainer = document.getElementById("resultContainer");
 const resultText = document.getElementById("result");
 
-function loadRandomQuestion() {
-    const randomIndex = Math.floor(Math.random() * questions.length);
-    const q = questions[randomIndex];
-    questionElement.textContent = q.question;
-    options.forEach((option, index) => {
-        option.textContent = q.options[index];
-    });
-    resultContainer.style.display = "none";
-}
-
 function checkAnswer(optionIndex) {
     if (optionIndex === questions[currentQuestion].answer) {
         score++;
