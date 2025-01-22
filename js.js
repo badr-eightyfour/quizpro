@@ -125,15 +125,7 @@ function loadRandomQuestion() {
     resultContainer.style.display = "none";
 }
 
-function checkAnswer(optionIndex) {
-    if (optionIndex === questions[currentQuestion].answer) {
-        score++;
-        resultText.textContent = "Correct!";
-    } else {
-        resultText.textContent = `Incorrect! The correct answer is: ${questions[currentQuestion].options[questions[currentQuestion].answer]}`;
-    }
-    resultContainer.style.display = "block";
-}
+
 
 function loadNextQuestion() {
     loadRandomQuestion(); // Randomize the next question
